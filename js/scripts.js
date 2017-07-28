@@ -1,13 +1,13 @@
 var main = function() {
-    $('.icon-menu').click(function() {
+    $('#menu-open').click(function() {
     	$('.overlay').css('width','100%');
-    	$('.icon-menu').css('visibility','hidden');
+    	$('#menu-open').css('visibility','hidden');
     });
 
-    $('.btn-close').click(function() {
+    $('#menu-close').click(function() {
     	$('.overlay').css('width','0%');
-    	$('.icon-menu').css('visibility','visible');
+    	$('#menu-open').css('visibility','visible');
     })
 };
 
-$(document).ready(main);
+$(main);
