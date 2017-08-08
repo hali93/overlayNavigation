@@ -8,28 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="nav" class="overlay">
-		<!-- Button to close the overlay navigation -->
-		<div class="container">
-			<div id="menu-close">&times;</div>
-		</div>
-		
-		<!-- Overlay content -->
-		<div class="overlay-content">
-		    <a href="#">About</a>
-		    <a href="#">Services</a>
-		    <a href="#">Contact</a>
-		    <a href="#">Blog</a>
-	  	</div>
-	</div>
 	<!-- Main body -->
-	<div class="jumbotron">
-		<div class="container">
-			<div id="menu-open">
-				<i class="fa fa-bars"></i>
-				Menu
-			</div>
-		</div>
+	<div class="jumbotron"></div>
+	<!--menu button-->
+	<button class="menu-button"><i class="fa fa-bars"></i></button>
+	<!--Overlay-->
+	<div class="overlay">
+		<!-- Overlay content -->
+		<nav class="overlay-menu">
+			<ul>
+				<li><a href="#">About</a></li>
+			    <li><a href="#">Services</a></li>
+			    <li><a href="#">Contact</a></li>
+			    <li><a href="#">Blog</a></li>
+			</ul>
+		</nav>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/scripts.js"></script>

@@ -8,9 +8,9 @@ body {
 	position: relative;
 	font-family: 'Lato', sans-serif;
 }
-.container {
+.container-fluid {
 	max-width: 95%;
-	margin: 0 auto;
+	margin: 0;
 }
 .row:before, 
 .row:after {
@@ -19,25 +19,18 @@ body {
 	clear: both;
  }
  .jumbotron {
- 	width: 100%;
+ 	width: 100vw;
  	height: 100vh;
  	background-image: url("../images/wings.jpeg");
  	background-size: cover;
  	background-position: center;
- }
- #menu-open {
- 	color: #61312F;
- 	font-size: 1.5rem; 
- 	cursor: pointer;
- 	margin: 25px;
- 	text-transform: uppercase;
- 	display: inline-block;
  }
  /*Overlay*/
  .overlay {
  	background-color: rgba(0,0,0, 0.5);
  	height: 100%;
  	width: 0%;
+ 	visibility: hidden;
  	position: fixed;
  	z-index: 1;
  	left: 0;
@@ -45,12 +38,28 @@ body {
  	overflow-x: hidden;
 	transition: 0.5s;
  }
- .overlay-content {
+ .overlay.open {
+	visibility: visible;
+	width: 100%;
+ }
+ .overlay-menu {
  	position: relative;
  	top: 20%;
+ 	height: 70%;
  	width: 100%;
  	text-align: center;
- 	margin-top: 30px;
+ }
+ .overlay ul {
+ 	list-style: none;
+ 	padding: 0;
+ 	margin: 0 auto;
+ 	display: inline-block;
+ 	position: relative;
+ 	height: 100%;
+ }
+ .overlay ul li {
+ 	height: 25%;
+ 	min-height: 50px;
  }
  .overlay a {
  	color: white;
@@ -65,19 +74,28 @@ body {
  .overlay a:hover, .overlay a:focus {
     color: #2F1715;
 }
-#menu-close {
-	margin: 15px;
+/*Menu button*/
+button {
+	position: fixed;
+	z-index: 100;
+	top: 2%;
+	left: 2%;
+	margin: 0;
+	padding: 5px;
 	font-size: 3rem;
 	color: white;
 	cursor: pointer;
 	display: inline-block;
+	background-color: transparent;
+	border: none;
 }
-#menu-close:hover {
+button:hover {
 	color: #2F1715;
+	border: none;
 }
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
-    #menu-close {
+    button {
         font-size: 40px;
         top: 15px;
         right: 35px;
